@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ClauseStream: Applicability-Aware AI Assistance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header><h1>ClauseStream<small>Relevant ≠ Applicable · a plug-in layer that tells an AI assistant which rules actually apply · <span class="badge">🔒 runs fully on-device, no data leaves the browser</span></small></h1>
+<div><select id="dom" aria-label="Domain"><option value="travel">Company travel policy</option><option value="care">Samsung Care warranty (English + Hinglish)</option></select> <button class="p" id="demo">▶ Play demo</button> <button id="bad">Test verifier</button> <button id="rst">Reset</button></div></header>
+<main class="grid">
+<section>
+<div class="card"><h2>Host assistant + ClauseStream plug-in</h2>
+<div class="pipe" id="pipe"></div><div id="msgs"></div>
+<div class="chips" id="chips"></div>
+<div class="row"><input id="inp" placeholder="Ask about a hotel claim…" autocomplete="off"><button class="p" id="send">Send</button></div></div>
+</section>
+<section>
+<div class="card"><h2>Clause index · applicability</h2><div id="cls"></div></div>
+<div class="card"><h2>Delta re-evaluation log</h2><div id="trace"><span style="color:var(--mut)">Waiting for the first message…</span></div></div>
+<div class="card"><h2>Standard RAG vs ClauseStream</h2><div class="cmp" id="cmp"></div></div>
+</section>
+<section>
+<div class="card"><h2>Situation tracker</h2><table id="sit"></table></div>
+<div class="card"><h2>Claim ledger · verified</h2><div id="led" style="color:var(--mut)">No claims yet.</div></div>
+<div class="card"><h2>Verified context → handed to host assistant</h2><pre class="k" id="ctx">{}</pre></div>
+</section></main>
+<script src="js/utils.js"></script>
+<script src="js/clauses.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+</body></html>
